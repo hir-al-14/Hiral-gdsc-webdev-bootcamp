@@ -8,7 +8,6 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 header {
@@ -29,15 +28,28 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #fff;
-    padding: 0.5em 1em;
+    padding: 0.2em 1em;
+    padding-left: 0px;
+    margin-right: 100px;
 }
 
 section {
     margin: 40px 0;
 }
 
+h1 {
+    padding-left: 300px; 
+}
+
 h2 {
+    padding-top: 15px;
     color: #333;
+}
+
+
+h4 {
+    color: #E0115F;
+    font-family: 'Courier New', monospace;
 }
 
 .image-item {
@@ -45,11 +57,47 @@ h2 {
 }
 
 .image-item img {
-    max-width: 100%;
+    max-width: 30%;
     height: auto;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%); /* Start from right outside the viewport */
+    }
+    100% {
+        transform: translateX(-100%); /* Slide to left outside the viewport */
+    }
+}
+
+.sliding-text-container {
+    background-color: #E0115F; /* Optional background */
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Keep text on one line */
+    padding: 10px 0; /* Optional padding */
+    border: 1px solid #ddd; /* Optional border */
+}
+
+.sliding-text {
+    display: inline-block;
+    animation: slide 5s linear infinite; /* Speed and looping */
+    font-size: 18px; /* Adjust as needed */
+    color: #f4f4f4; /* Text color */
+}
+
+.image2-item {
+    margin-bottom: 20px;
+}
+
+.image2-item img {
+    max-width: 30%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
 
 .portfolio-item {
     margin-bottom: 20px;
@@ -62,9 +110,34 @@ h2 {
     border-radius: 4px;
 }
 
+.Email-btn, .LinkedIn-btn, .GitHub-btn {
+    text-decoration: none;
+    padding: 12px 20px;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.Email-btn {
+    background-color: #D44638; /* Email Red */
+    margin-right: 230px;
+}
+
+.LinkedIn-btn {
+    background-color: #0e76a8; /* LinkedIn Blue */
+    margin-right: 230px;
+}
+
+.GitHub-btn {
+    background-color: #333; /* GitHub Dark */
+}
+
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1em 0;
+    margin: 10px
 }
